@@ -19,5 +19,14 @@
             <h2><a href="">My second post</a></h2>
             <p>This is the second post of my blog in the test django project.</p>
         </div>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
